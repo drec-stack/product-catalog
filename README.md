@@ -194,3 +194,4 @@ interface ProductsState {
 
 📄 Лицензия
 MIT License - смотрите файл LICENSE для деталей.
+    
