@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: ['cdn.dummyjson.com', 'i.dummyjson.com'],
-  },
+  output: 'export',
   trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
+  basePath: process.env.NODE_ENV === 'production' ? '/product-catalog' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/product-catalog/' : '',
 }
 
 module.exports = nextConfig
